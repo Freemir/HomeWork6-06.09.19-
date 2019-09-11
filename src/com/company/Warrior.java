@@ -1,9 +1,13 @@
 package com.company;
 
-public class Warrior extends Players {
-    public Warrior(int health, int damage, String specialAbility){
+public class Warrior extends ObjectsTemplate implements SPUsable {
+
+    public Warrior(int health, int damage){
         this.health = health;
         this.damage = damage;
-        this.specialAbility = specialAbility;
+    }
+    @Override
+    public String specialAbility(){
+        return "Применил супер способность \"Физическая атака\"";
     }
 }

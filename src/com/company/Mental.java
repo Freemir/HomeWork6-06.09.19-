@@ -1,9 +1,13 @@
 package com.company;
 
-public class Mental extends Players {
-    public Mental(int health, int damage, String specialAbility){
+public class Mental extends ObjectsTemplate implements SPUsable{
+
+    public Mental(int health, int damage){
         this.health = health;
         this.damage = damage;
-        this.specialAbility = specialAbility;
+    }
+    @Override
+    public String specialAbility(){
+        return "Применил супер способность \"Ментальная атака\"";
     }
 }
