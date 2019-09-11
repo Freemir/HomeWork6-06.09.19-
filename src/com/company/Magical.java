@@ -1,10 +1,13 @@
 package com.company;
 
-public class Magical extends Players {
+public class Magical extends ObjectsTemplate implements SPUsable {
 
-    public Magical(int health, int damage, String specialAbility){
+    public Magical(int health, int damage){
         this.health = health;
         this.damage = damage;
-        this.specialAbility = specialAbility;
+    }
+    @Override
+    public String specialAbility(){
+        return "Применил супер способность \"Магическая атака\"";
     }
 }
